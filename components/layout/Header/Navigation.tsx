@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Breadcrumb } from '@/components/ui/breadcrumb';
+// import { usePathname } from '@/lib/usePathname';
 import { cn } from '@/lib/utils';
 import { ModeToggle } from '@/components/mode-toggle';
 import {
@@ -53,7 +52,7 @@ const resourceItems = [
 ];
 
 export function Navigation() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   return (
     <NavigationMenu className="mx-auto">

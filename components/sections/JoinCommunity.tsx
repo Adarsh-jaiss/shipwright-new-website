@@ -44,7 +44,7 @@ const communityLinks = [
 
 export function JoinCommunity() {
   return (
-    <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-background to-secondary/20">
+    <section id='community' className="py-16 px-4 md:px-8 bg-gradient-to-b from-background to-secondary/20">
       <div className="container max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

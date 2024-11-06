@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { JoinCommunity } from '@/components/sections/JoinCommunity';
 import { ResourcesSection } from '@/components/sections/ResourcesSection';
 import { talks, blogs } from '@/lib/resources';
-import { installMethods, InstallSection } from '@/components/sections/InstallSection';
 import { motion } from 'framer-motion';
+import { InstallSection } from '@/components/sections/InstallSection';
 
 
 const features = [
@@ -116,8 +116,9 @@ export default function Home() {
         </div>
       </section>
       <InstallSection/>
-      <JoinCommunity />
+      
       <ResourcesSection talks={talks} blogs={blogs} />
+      <JoinCommunity />
     </>
   );
 }
