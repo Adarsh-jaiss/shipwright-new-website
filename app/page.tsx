@@ -1,101 +1,123 @@
-import Image from "next/image";
+"use client"
+import { Button } from '@/components/ui/button';
+import { Github, Package, Cloud, Puzzle } from 'lucide-react';
+import Link from 'next/link';
+import { JoinCommunity } from '@/components/sections/JoinCommunity';
+import { ResourcesSection } from '@/components/sections/ResourcesSection';
+import { talks, blogs } from '@/lib/resources';
+import { installMethods, InstallSection } from '@/components/sections/InstallSection';
+import { motion } from 'framer-motion';
+
+
+const features = [
+  {
+    title: 'Multiple Build Strategies',
+    description: 'Support for various build strategies including Buildpacks, Buildah, Kaniko, and more.',
+    icon: Package,
+  },
+  {
+    title: 'Kubernetes Native',
+    description: 'Built from the ground up to work seamlessly with Kubernetes and follow cloud-native principles.',
+    icon: Cloud,
+  },
+  {
+    title: 'Extensible',
+    description: 'Easy to extend and customize with your own build strategies and workflows.',
+    icon: Puzzle,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <section className="min-h-[80vh] flex items-center justify-center py-16 px-4">
+        <div className="container  flex max-w-[64rem] flex-col items-center gap-4 text-center ">
+        {/* <h1>Shipwright</h1> */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            A framework for building container images on{' '}
+            <span className=" text-blue-700">Kubernetes</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8"
           >
-            Read our docs
-          </a>
+            Build container images using popular build strategies like
+            Buildpacks, Buildah, Kaniko, ko and more.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="space-x-4"
+          >
+            <Button asChild size="lg" className="animate-bounce">
+              <Link href="#install-shipwright">Quick Start</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="https://shipwright.io/docs/">Documentation</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link
+                href="https://github.com/shipwright-io/build"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-5 w-5" />
+                Star on GitHub
+              </Link>
+            </Button>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      <section
+        id="features"
+        // className="container space-y-6 py-8 md:py-12 lg:py-24 flex flex-col items-center"
+        className="space-y-6 py- md:py-12 lg:py-24 flex flex-col "
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        Features
+          </h2>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        Shipwright provides a powerful and flexible framework for building
+        container images on Kubernetes.
+          </p>
+        </div>
+        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+          {features.map((feature, index) => (
+        <motion.div
+          key={feature.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="relative overflow-hidden rounded-lg border border-gray-300 bg-background p-4 transition-all hover:shadow-lg"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <div className="space-y-2 text-center">
+          <feature.icon className="h-10 w-10 text-primary mb-4 mx-auto" />
+          <h3 className="font-bold">{feature.title}</h3>
+          <p className="text-sm text-muted-foreground">
+            {feature.description}
+          </p>
+            </div>
+          </div>
+        </motion.div>
+          ))}
+        </div>
+      </section>
+      <InstallSection/>
+      <JoinCommunity />
+      <ResourcesSection talks={talks} blogs={blogs} />
+    </>
   );
 }
