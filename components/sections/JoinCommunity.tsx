@@ -59,7 +59,7 @@ export function JoinCommunity() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto ">
           {communityLinks.map((item, index) => (
             <motion.div
               key={item.title}
@@ -67,7 +67,7 @@ export function JoinCommunity() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-lg p-6 hover:shadow-lg transition-shadow flex flex-col items-start text-center border border-gray-300"
+              className="bg-card rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col items-start text-center border border-gray-300 hover:shadow-gray-400 dark:hover:shadow-gray-700"
             >
               <div className="text-primary mb-4">
                 {item.icon}

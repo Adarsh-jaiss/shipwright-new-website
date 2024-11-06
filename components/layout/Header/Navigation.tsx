@@ -1,8 +1,5 @@
-'use client';
-
 import * as React from 'react';
 import Link from 'next/link';
-// import { usePathname } from '@/lib/usePathname';
 import { cn } from '@/lib/utils';
 import { ModeToggle } from '@/components/mode-toggle';
 import {
@@ -52,18 +49,28 @@ const resourceItems = [
 ];
 
 export function Navigation() {
-  // const pathname = usePathname();
-
   return (
     <NavigationMenu className="mx-auto">
       <NavigationMenuList className="gap-6 mt-4">
-        <NavigationMenuItem>
+        
+        {/* Add the Shipwright logo/name at the beginning */}
+        <NavigationMenuItem className="flex items-center">
+          <Link href="#home" legacyBehavior passHref>
+            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), 'flex items-center')}>
+              {/* <img src="/shipwright-logo.svg" alt="Shipwright Logo" className="h-8 mr-2" /> */}
+              <span className="font-medium">Shipwright</span>
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        {/* <NavigationMenuItem>
           <Link href="#home" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
+
         <NavigationMenuItem>
           <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
           <NavigationMenuContent>

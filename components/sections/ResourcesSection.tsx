@@ -36,7 +36,7 @@ export function ResourcesSection({ talks, blogs }: ResourcesSectionProps) {
           </TabsList>
 
           <TabsContent value="talks">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto ">
               {talks.map((talk, index) => (
                 <motion.div
                   key={talk.title}
@@ -45,7 +45,7 @@ export function ResourcesSection({ talks, blogs }: ResourcesSectionProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
+                  <Card className="overflow-hidden hover:shadow-sm transition-shadow h-full hover:shadow-gray-400 dark:hover:shadow-gray-700">
                     <Link
                       href={talk.youtubeUrl}
                       target="_blank"
