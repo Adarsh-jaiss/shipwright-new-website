@@ -17,7 +17,7 @@ export function SocialLinks() {
       </Button>
       <Button variant="ghost" size="icon" asChild className="hover:text-primary transition-colors">
         <Link
-          href="https://twitter.com/shipwrightio"
+          href="https://x.com/shipwrightio"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -8,9 +8,6 @@ import { talks, blogs } from '@/lib/resources';
 import { motion } from 'framer-motion';
 import { InstallSection } from '@/components/sections/InstallSection';
 import { FeaturesSection } from '@/components/sections/Features';
-import { HeroSection } from '@/components/sections/HeroSection';
-
-
 
 export default function Home() {
   return (
@@ -66,7 +63,7 @@ export default function Home() {
         </section>
 
       </div>
-     
+
       <FeaturesSection />
       <InstallSection />
       <ResourcesSection talks={talks} blogs={blogs} />

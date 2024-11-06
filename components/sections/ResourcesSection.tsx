@@ -53,9 +53,9 @@ export function ResourcesSection({ talks, blogs }: ResourcesSectionProps) {
                       className="block h-full"
                     >
                       <div className="aspect-video relative">
-                        {talk.thumbnail && (
+                        {talk.youtubeUrl && (
                           <img
-                            src={talk.thumbnail}
+                            src={`https://img.youtube.com/vi/${new URL(talk.youtubeUrl).searchParams.get('v')}/hqdefault.jpg`}
                             alt={talk.title}
                             className="object-cover w-full h-full"
                           />
