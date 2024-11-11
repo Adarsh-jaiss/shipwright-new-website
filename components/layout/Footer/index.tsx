@@ -20,15 +20,15 @@ export function Footer() {
             <Link href="#community" className="hover:text-primary transition-colors">
               Mailing List
             </Link>
-            <Link href="/community/maintainers" className="hover:text-primary transition-colors">Maintainers</Link>
+            <Link href="https://github.com/shipwright-io/build/blob/main/OWNERS" className="hover:text-primary transition-colors">Maintainers</Link>
             <Link href="https://github.com/shipwright-io/.github/blob/main/CONTRIBUTING.md" className="hover:text-primary transition-colors">Contributing</Link>
           </FooterColumn>
 
           <FooterColumn title="Resources">
-            <Link href="/docs/quick-start" className="hover:text-primary transition-colors">Quick Start</Link>
-            <Link href="/docs/examples" className="hover:text-primary transition-colors">Examples</Link>
-            <Link href="/docs/faq" className="hover:text-primary transition-colors">FAQ</Link>
-            <Link href="/docs/roadmap" className="hover:text-primary transition-colors">Roadmap</Link>
+            <Link href="https://github.com/shipwright-io/build" className="hover:text-primary transition-colors">Quick Start</Link>
+            <Link href="https://github.com/shipwright-io/build/tree/main/samples/v1beta1" className="hover:text-primary transition-colors">Examples</Link>
+            <Link href="" className="hover:text-primary transition-colors">FAQ</Link>
+            <Link href="" className="hover:text-primary transition-colors">Roadmap</Link>
           </FooterColumn>
 
           <div className="space-y-4">

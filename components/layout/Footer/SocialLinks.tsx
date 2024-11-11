@@ -27,7 +27,7 @@ export function SocialLinks() {
       </Button>
       <Button variant="ghost" size="icon" asChild className="hover:text-primary transition-colors">
         <Link
-          href="https://linkedin.com/company/shipwright"
+          href="https://www.linkedin.com/company/shipwright-io"
           target="_blank"
           rel="noopener noreferrer"
         >

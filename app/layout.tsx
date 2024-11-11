@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from '@/components/ui/toaster';
+import StatusBar from '@/components/layout/Statusbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,7 +30,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">
+           
             <Header />
+            {/* <StatusBar /> */}
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

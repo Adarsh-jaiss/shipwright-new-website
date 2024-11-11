@@ -10,11 +10,11 @@ export interface Talk {
 
 export interface BlogPost {
   title: string;
-  slug: string;
   excerpt: string;
   author: string;
   date: string;
   readingTime: number;
+  Link: string;
 }
 
 export const talks: Talk[] = [
@@ -71,19 +71,27 @@ export const talks: Talk[] = [
 
 export const blogs: BlogPost[] = [
   {
-    title: "Getting Started with Shipwright",
-    slug: "getting-started",
-    excerpt: "Learn how to set up Shipwright in your Kubernetes cluster and build your first container image.",
-    author: "Alice Johnson",
-    date: "2024-03-10",
-    readingTime: 5
+    title: "Building Secure Container images with Shipwright",
+    excerpt: "Learn how to run vulnerability scanning on container images with Shipwright while building those images.",
+    author: "Karan Kumar",
+    date: "July 15, 2024",
+    readingTime: 5,
+    Link:"https://shipwright.io/blog/2024/07/15/building-secure-container-images-with-shipwright/"
   },
   {
-    title: "Advanced Build Strategies in Shipwright",
-    slug: "advanced-build-strategies",
-    excerpt: "Explore different build strategies and learn when to use each one for optimal results.",
-    author: "Bob Wilson",
-    date: "2024-03-01",
-    readingTime: 8
-  }
+    title: "Shipwright v0.13.0 Is Here",
+    excerpt: "Know more about the new features, improvements and chanagelog in shipwright v0.13.0.",
+    author: "Enrique Encalada",
+    date: "March 27, 2024",
+    readingTime: 4,
+    Link: "https://shipwright.io/blog/2024/03/27/shipwright-v0.13.0-is-here/"
+  },
+  {
+    title:"Introducing Shipwright Beta API",
+    excerpt:"Know more about the multiple changes and improvements Beta API brings in Shipwright as a result of accumulated experience operating the alpha API and incorporating valuable user feedback.",
+    author:"Enrique Encalada",
+    date:"November 07, 2023",
+    readingTime:3,
+    Link:"https://shipwright.io/blog/2023/11/07/introducing-shipwright-beta-api/"
+  },
 ];

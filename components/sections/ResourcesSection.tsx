@@ -14,7 +14,7 @@ interface ResourcesSectionProps {
 
 export function ResourcesSection({ talks, blogs }: ResourcesSectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8">
+    <section id='resources' className="py-16 px-4 md:px-8">
       <div className="container max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export function ResourcesSection({ talks, blogs }: ResourcesSectionProps) {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
-                    <Link href={`/blog/${blog.slug}`} className="block h-full">
+                    <Link href={`${blog.Link}`} className="block h-full">
                       <div className="p-6">
                         <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
                         <p className="text-muted-foreground mb-4">
