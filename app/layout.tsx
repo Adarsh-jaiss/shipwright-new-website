@@ -5,7 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from '@/components/ui/toaster';
-import StatusBar from '@/components/layout/Statusbar';
+// import StatusBar from '@/components/layout/Statusbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
